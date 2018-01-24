@@ -1,0 +1,76 @@
+<HTML>
+<head>
+    <title>WFTPLACE Digital Catalog System - Liner Systems</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your site's description should be here">
+    <meta name="keywords" content="Your site's keywords should be here">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="css/home-style.css">
+    <link rel="stylesheet" href="css/nav-style.css">
+    <!--[if IE 6]>
+    <style type="text/css">
+        * html .group {
+            height: 1%;
+        }
+    </style>
+    <![endif]-->
+    <!--[if IE 7]>
+    <style type="text/css">
+        *:first-child + html .group {
+            min-height: 1px;
+        }
+    </style>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin,latin-ext,vietnamese">
+</head>
+<body>
+<div class="global_container_">
+<!--#include file="header.html" -->
+<div class="main-content-wrapper">
+    <div class="rectangle-9-holder">
+        <div class="col">
+            <div class="l-constrained-4">
+                <img class="layer-106" src="Home Page/images/layer_106.png" alt="" width="122" height="122">
+                <div class="rectangle-6-holder">
+                    <a href="liner.shtml">Select a LSIZE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row-2 group">
+        <div class="col-2">
+            <p class="text-7"><a href="https://www.WFTPLACE.com/en/about-us/" Target="_blank">About
+                WFTPLACE</a></p>
+            <p class="text-8"><a href="support.shtml">Site Support</a></p>
+            <p class="text-9"><a href="contact.shtml">Contact WFTPLACE</a></p>
+        </div>
+        <div class="col-3">
+            <h2>About WFTPLACE</h2>
+            <p class="text-11">Optional Short Description, or part of the long description... <br>Lorem ipsum dolor
+                sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore...<br>aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+                <span class="text-style">&nbsp;</span>
+                <br>Optional Short Description, or part of the long description... <br>Lorem ipsum dolor sit amet,
+                consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+                incididunt ut labore et dolore...<br>aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+            <div class="rectangle-6-holder-2">
+                <a href="liner.shtml">Select a LSIZE</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--#include file="footer.html" -->
+</div>
+</body>
+</HTML>

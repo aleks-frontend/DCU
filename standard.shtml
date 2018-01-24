@@ -1,0 +1,218 @@
+<!doctype html>
+<html>
+<head>
+    <title>Standard</title>
+    <meta charset="UTF-8">
+    <meta name="description" content="Your site's description should be here">
+    <meta name="keywords" content="Your site's keywords should be here">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin,latin-ext,vietnamese">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="css/standard-style.css">
+    <link rel="stylesheet" href="css/nav-style.css">
+    <!--[if IE 6]>
+    <style type="text/css">
+        * html .group {
+            height: 1%;
+        }
+    </style>
+    <![endif]-->
+    <!--[if IE 7]>
+    <style type="text/css">
+        *:first-child+html .group {
+            min-height: 1px;
+        }
+    </style>
+    <![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+
+    <style>
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+        }
+
+        /* Style the buttons that are used to open the tab content */
+        .tab button {
+            float: left;
+            background-color: transparent;
+            border: none;
+            border-bottom: 2px solid #d3d3d3;
+            color: #888;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 0;
+            transition: 0.3s;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            color: #ce1141;
+            border-bottom: 2px solid #ce1141;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            border-bottom: 2px solid #ce1141;
+            color: #ce1141;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding-top: 50px;
+            border-top: none;
+        }
+
+        .col-3 {
+            display: inline-block;
+            width: 33%;
+            vertical-align: top;
+        }
+        .col-3 img {
+            max-width: 300px;
+        }
+
+        #price-table {
+            border: 1px solid #d3d3d3;
+            width: 664px;
+        }
+        #price-table th, #price-table td {
+            height: 50px;
+            padding: 15px;
+            vertical-align: middle;
+            text-align: center;
+        }
+        #price-table tr:nth-of-type(even) {
+            background-color: #d3d3d3;
+        }
+
+        #pdf-wrapper {
+            background-color: rgba(0,0,0,0.7);
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2000;
+        }
+
+        #expand-pdf {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        #pdf.normal {
+            width:536px;
+            height:693px;
+        }
+        #pdf.fullscreen {
+            width: 100vw;
+            max-width: 1400px;
+            height: 100vh;
+            z-index: 2001;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+<body>
+<div class="global_container_">
+    <!--#include file="header.html" -->
+    <div class="main-content-wrapper">
+        <div class="row-7 group">
+            <div class="col">
+                <div class="body">
+                    <a href="index.shtml">Home</a> &nbsp;/ &nbsp;Liner Size &nbsp;/ &nbsp;13 3 /8” x 16”
+                </div>
+                <div id="pdf-wrapper" onclick="closePDF()"></div>
+                <iframe class="large-hookup normal" id="pdf" src="resources/test.pdf"></iframe>
+                <div id="expand-pdf">
+                    <button onclick="expandPDF();">Fullscreen</button>
+                </div>
+                <!-- <img class="large-hookup" src="Standard%20Liner/images/large_hookup.jpg" alt="" width="536" height="693"> -->
+            </div>
+            <div class="col-5">
+                <h1>STANDARD LINER HANGER SIZE<br>13 3 /8” x 16”<span id="productName" style="display:none;">13 3/8&quot; x 16.000&quot;</span></h1>
+                <p class="text-9">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+
+                <p><br></p>
+                <button class="favorites-button" onclick="openPopup()">
+                    <div class="layer-101-holder"><img class="common-favourite-favorite-star-favorites-bookmark-icon-copy-2" src="../Home%20Page/images/common-favourite-favorite_2.png" alt="" width="10" height="10"></div>
+                    Add to Favorites</button>
+                <!--<div class="row-3 group">
+                    <div class="layer-100-copy-3-holder">
+                        <img class="common-favourite-favorite-star-favorites-bookmark-icon-copy-5" src="Standard%20Liner/images/common-favourite-favorite_2.png" alt="" width="10" height="10">
+                    </div>
+                    <img class="text-12" src="Standard%20Liner/images/this_item_is_in_your_favo.png" alt="This Item is in your favorites" width="189" height="12" title="This Item is in your favorites">
+                </div>-->
+                <div class="shape-2"></div>
+                <p class="text-13">Involved Components</p>
+                <div class="row-13 group">
+                    <div class="col-8">
+                        <a href="javascript:swapPDF('test2.pdf')"><img class="rectangle-9" src="../Standard%20Liner/images/rectangle_9.png" alt="" width="139" height="179">
+                        <p class="text-14"><span class="fw500">Standard</span><br>Packer</p></a>
+                    </div>
+                    <div class="col-9">
+                        <a href="javascript:swapPDF('test2.pdf')"><img class="rectangle-9-copy" src="../Standard%20Liner/images/rectangle_9.png" alt="" width="139" height="179">
+                            <p class="text-15"><span class="fw500">Standard</span><br>Liner Hanger</p></a>
+                    </div>
+                    <div class="col-10">
+                        <a href="javascript:swapPDF('test2.pdf')"><img class="rectangle-9-copy-2" src="../Standard%20Liner/images/rectangle_9.png" alt="" width="139" height="179">
+                            <p class="text-16"><span class="fw500">Standard</span><br>Running Tools</p></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="row-10 group tab">
+            <button class="text-18 tablinks active" onclick="openTab(event, 'tab1')">More Information</button>
+            <button class="text-18 tablinks" onclick="openTab(event, 'tab2')">Related Documents</button>
+            <button class="text-18 tablinks" onclick="openTab(event, 'tab3')">Price Table</button>
+        </div>
+        <div id="tab1" class="tabcontent active" style="display:block;">
+            <p class="text-21">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+        </div>
+        <div id="tab2" class="tabcontent">
+            <div class="col-3"><img src="../Standard%20Liner/images/large_hookup.jpg"></div>
+            <div class="col-3"><img src="../Standard%20Liner/images/large_hookup.jpg"></div>
+            <div class="col-3"><img src="../Standard%20Liner/images/large_hookup.jpg"></div>
+        </div>
+        <div id="tab3" class="tabcontent">
+            <table id="price-table">
+                <tr>
+                    <th> </th>
+                    <th>Day 1</th>
+                    <th>Day 7</th>
+                    <th>Day 21</th>
+                    <th>Day 30</th>
+                </tr>
+                <tr>
+                    <td>Rental</td>
+                    <td>$0000</td>
+                    <td>$000000</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Buy</td>
+                    <td>$00000</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!--#include file="footer.html" -->
+</body>
+</html>
