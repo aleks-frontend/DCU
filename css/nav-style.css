@@ -47,7 +47,7 @@
 
 .nav-shop {
     float: right;
-    margin-top: 12px;
+    margin-top: 2px;
     width: 7px;
     color: #2c2c2c;
     font-size: 0.759363em; /* 12.15px / 16px = 0.759375em */
@@ -56,7 +56,7 @@
 
 /* MegaNav Styling */
 nav {
-    padding: 11px 0;
+    padding: 11px 15px;
     position: relative;
     z-index: 1000;
 }
@@ -87,16 +87,16 @@ nav li div.nav-wrapper {
     -webkit-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     -moz-box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-    width: 100vw;
-    height: 550px;
+    width: 100%;
     position: absolute;
     top: 58px;
-    left: calc(-50vw + 587px);
+    left: 0;
+    padding-bottom: 20px;
 }
 
 nav li div.nav-container {
     display: none;
-    width: 1174px;
+    max-width: 1174px;
     height: auto;
     margin: 0 auto;
 }
@@ -116,6 +116,7 @@ nav li div ul {
 
 nav li div ul li {
     display: block;
+    padding-bottom: 10px;
 }
 
 nav li div ul li a {
@@ -140,11 +141,10 @@ nav ul.sub-level {
 
 nav ul.sub-sub-level {
     display: none;
-    position: absolute;
+    position: relative;
     padding-top: 20px;
     top: 0;
-    left: 100%;
-    width: calc(1174px - 100%);
+    width: 100%;
     min-height: 100%;
 }
 
@@ -152,7 +152,7 @@ nav ul.sub-sub-level li {
     display: inline-block;
     text-align: center;
     padding: 0;
-    width: 20%;
+    width: auto;
 }
 
 nav ul.sub-level li:hover ul.sub-sub-level {
@@ -180,13 +180,13 @@ nav li a:hover .nav-img {
 /* Footer */
 
 .footer {
-    margin: 118px auto 0;
+    margin: 0;
     position: relative;
-    width: 99.767715%; /* 1718px / 1722px = 99.767715% */
+    max-width: 99.767715%; /* 1718px / 1722px = 99.767715% */
 }
 
 .footer-2 {
-    padding: 36px 0;
+    padding: 125px 0 20px 0 ;
     position: relative;
     width: 100%; /* 1718px / 1718px = 100% */
     background: url(Home%20Page/images/layer_105.jpg) no-repeat center 0;
@@ -198,7 +198,13 @@ nav li a:hover .nav-img {
 .l-constrained {
     margin: 0 auto;
     position: relative;
-    width: 1174px;
+    max-width: 1174px;
+    width: 100%;
+}
+
+.l-constrained img {
+    width: 100%;
+    text-align: center;
 }
 
 .wft-horiz-red-black_png {
@@ -211,7 +217,8 @@ nav li a:hover .nav-img {
     color: #8c8c8c;
     font-size: 0.828125em; /* 13.25px / 16px = 0.828125em */
     font-weight: 300;
-    text-align: left;
+    text-align: center;
+    padding: 0 10px;
 }
 
 .fav-wrapper {
@@ -309,4 +316,39 @@ input[type="submit"]{
 }
 a:hover {
     color: #ce1141;
+}
+
+/****************************************************************************/
+/******************************** RESPONSIVE ********************************/
+
+@media screen and (max-width: 767px) {
+
+    .wrapper-4 {
+        width: 100%;
+    }
+
+    #fav-list {
+        top: 97px;
+    }
+
+    nav li div.nav-wrapper {
+        top: 97px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .wrapper-4 ~ a {
+        width: 100%;
+        display: block;
+    }
+
+    nav ul.top-level {
+        margin: 0;
+    }
+
+    #sizes {
+        padding-left: 0;
+    }
+
+
 }

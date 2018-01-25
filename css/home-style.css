@@ -127,7 +127,6 @@ video {
 }
 
 body {
-    min-width: 1174px;
     color: #565656;
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -185,7 +184,8 @@ body {
 .l-constrained-2 {
     margin: 0 auto;
     position: relative;
-    width: 1174px;
+    max-width: 1174px;
+    padding: 0 15px;
 }
 
 .text-2 {
@@ -194,6 +194,12 @@ body {
     color: #525252;
     font-size: 0.875294em; /* 14px / 16px = 0.875em */
     font-weight: 300;
+}
+
+.text-2 a {
+    border-right: 1px solid #999;
+    display: inline-block;
+    padding-right: 10px;
 }
 
 .text-3 {
@@ -215,7 +221,7 @@ body {
 .l-constrained-3 {
     margin: 0 auto;
     position: relative;
-    width: 1174px;
+    max-width: 1174px;
 }
 
 .wrapper-4 {
@@ -300,7 +306,7 @@ body {
 }
 
 .col {
-    padding: 133px 0 128px;
+    padding: 80px 0;
     position: relative;
     width: 100%; /* 1722px / 1722px = 100% */
     background: url(../Home Page/images/561a6900.png) no-repeat center 0;
@@ -311,7 +317,7 @@ body {
 .l-constrained-4 {
     margin: 0 auto;
     position: relative;
-    width: 1174px;
+    max-width: 1174px;
 }
 
 .layer-106 {
@@ -322,13 +328,13 @@ body {
 .rectangle-6-holder {
     margin: 40px auto 0;
     position: relative;
-    width: 353px;
+    max-width: 353px;
     border: 1px solid #ffffff; /*stroke*/
 }
 
 .rectangle-6-holder a {
     display: block;
-    padding: 16px 0 17px;
+    padding: 16px 10px 17px;
 }
 
 .text-6 {
@@ -337,22 +343,26 @@ body {
 }
 
 .row-2 {
-    margin: 46px auto 0;
-    padding: 0 1px 0 8px;
+    /*margin: 46px auto 0;*/
+    /*padding: 0 1px 0 8px;*/
     position: relative;
-    width: 1165px;
+    max-width: 1165px;
+    margin: 0 auto;
+    padding: 35px 15px;
 }
 
 .col-2 {
     float: left;
     position: relative;
-    width: 172px;
+    width: 20%;
+    margin-right: 2%;
 }
 
 .text-7 {
     color: #525252;
     font-size: 1.098125em; /* 17.57px / 16px = 1.098125em */
     font-weight: 300;
+    line-height: 1.352941em;
 }
 
 .text-8 {
@@ -360,6 +370,7 @@ body {
     color: #525252;
     font-size: 1.098125em; /* 17.57px / 16px = 1.098125em */
     font-weight: 300;
+    line-height: 1.352941em;
 }
 
 .text-9 {
@@ -367,12 +378,13 @@ body {
     color: #525252;
     font-size: 1.098125em; /* 17.57px / 16px = 1.098125em */
     font-weight: 300;
+    line-height: 1.352941em;
 }
 
 .col-3 {
-    float: right;
+    float: left;
     position: relative;
-    width: 952px;
+    width: 78%;
 }
 
 .text-10 {
@@ -381,17 +393,16 @@ body {
 }
 
 .text-11 {
-    margin: 29px 0 0;
+    margin: 10px 0 0;
     font-size: 1.0625em; /* 17px / 16px = 1.0625em */
     font-weight: 300;
     line-height: 1.352941em; /* 23px / 17px = 1.352941em */
 }
 
 .rectangle-6-holder-2 {
-    margin: 41px auto 0;
+    margin: 25px 0;
     position: relative;
-    right: 110.5px;
-    width: 353px;
+    max-width: 353px;
     border: 1px solid #b7b7b7; /*stroke*/
     background: #ffffff;
     -moz-background-clip: padding;
@@ -401,7 +412,7 @@ body {
 
 .rectangle-6-holder-2 a {
     display: block;
-    padding: 16px 0 17px;
+    padding: 16px 10px 17px;
 }
 
 .text-12 {
@@ -471,4 +482,64 @@ body {
 .text-style {
     line-height: 23px;
 }
+
+/****************************************************************************/
+/******************************** RESPONSIVE ********************************/
+
+@media screen and (max-width: 767px) {
+
+    .col {
+        padding: 50px 0;
+    }
+
+    .col-2,
+    .col-3 {
+        width: 100%;
+    }
+
+    .col-2 {
+        margin-bottom: 25px;
+        margin-right: 0%;
+    }
+
+    .text-7,
+    .text-8,
+    .text-9 {
+        float: left;
+        margin: 0;  
+    }
+
+    .text-7,
+    .text-8 {
+        margin-right: 35px;
+    }
+
+    .l-constrained-4 {
+        padding: 0 15px;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .text-7,
+    .text-8,
+    .text-9 {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0;    
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .text-2 a {
+        float: none;
+        display: block;
+        width: 100%;
+        border-right: none;
+    }
+}
+
+
+
+
+
 

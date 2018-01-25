@@ -126,7 +126,6 @@ video {
 }
 
 body {
-  min-width: 1174px;
   color: #525252;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -175,7 +174,7 @@ body {
 .l-constrained-3 {
   margin: 0 auto;
   position: relative;
-  width: 1174px;
+  max-width: 1174px;
 }
 .text-2 {
   float: left;
@@ -183,6 +182,13 @@ body {
   font-size: 0.875294em; /* 14px / 16px = 0.875em */
   font-weight: 300;
 }
+
+.text-2 a {
+    border-right: 1px solid #999;
+    display: inline-block;
+    padding-right: 10px;
+}
+
 .text-3 {
   float: right;
   font-size: 0.875294em; /* 14px / 16px = 0.875em */
@@ -274,7 +280,8 @@ body {
 .l-constrained-2 {
   margin: 0 auto;
   position: relative;
-  width: 1174px;
+  max-width: 1174px;
+  padding: 0 15px;
 }
 .text-6 {
   display: block;
@@ -290,13 +297,13 @@ body {
   margin: 19px auto 0;
   padding: 0 8px;
   position: relative;
-  width: 1158px;
+  max-width: 1158px;
 }
 .col-2 {
   float: left;
-  margin: 24px 97px 0 0;
+  margin-top: 24px;
   position: relative;
-  width: 172px;
+  width: 20%;
 }
 .text-8 {
   font-size: 1.098125em; /* 17.57px / 16px = 1.098125em */
@@ -315,16 +322,15 @@ body {
 .col-3 {
   float: left;
   position: relative;
-  width: 856px;
+  width: 80%;
 }
 .row-9 {
-  overflow: hidden;
   position: relative;
 }
 .col-7 {
   float: left;
   position: relative;
-  width: 379px;
+  width: 40%;
 }
 .wrapper-9 {
   height: 89px;
@@ -369,12 +375,12 @@ body {
   position: relative;
   width: 396px;
   background: url(../Contact Page/images/name.png) no-repeat;
+  box-sizing: border-box;
 }
 .text-13 {
   display: block;
   margin: 0 auto;
   position: relative;
-  right: 162px;
 }
 .email-holder {
   margin: 20px 0 0;
@@ -382,6 +388,7 @@ body {
   position: relative;
   width: 396px;
   background: url(../Contact Page/images/name.png) no-repeat;
+  box-sizing: border-box;
 }
 .text-14 {
   display: block;
@@ -419,12 +426,12 @@ body {
   left: 8px;
   margin: -1px auto 0;
   position: relative;
-  width: 840px;
+  max-width: 840px;
 }
 .text-15 {
   float: left;
   margin: 43px 0 0;
-  width: 341px;
+  max-width: 341px;
   color: #3f3f3f;
   font-size: 1.0625em; /* 17px / 16px = 1.0625em */
   font-weight: 300;
@@ -468,7 +475,8 @@ body {
   margin: 19px 0 0;
   padding: 15px 0 14px;
   position: relative;
-  width: 417px;
+  max-width: 250px;
+  width: 100%;
   background: url(../Contact Page/images/red_button.png) no-repeat;
 }
 .submit {
@@ -524,4 +532,62 @@ body {
   height: 25px;
   width: 2px;
   background-color: #cd1f46; /*Layer's solid color*/
+}
+
+
+/****************************************************************************/
+/******************************** RESPONSIVE ********************************/
+
+@media screen and (max-width: 1023px) {
+    .col-2,
+    .col-3,
+    .col-7 {
+      width: 100%;
+    }
+    
+    .text-8,
+    .text-9,
+    .text-10 {
+      margin: 0;
+      float: left;
+    }
+
+    .text-8,
+    .text-9 {
+      margin-right: 35px;
+    }
+
+    .col-5 {
+      width: 100%;
+    }
+
+
+}
+
+
+@media screen and (max-width: 520px) {
+    .text-8,
+    .text-9,
+    .text-10 {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0;    
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .text-2 a {
+        float: none;
+        display: block;
+        width: 100%;
+        border-right: none;
+    }
+
+    .name-holder,
+    .email-holder {
+      width: 100%;
+    }
+
+
 }

@@ -126,7 +126,6 @@ video {
 }
 
 body {
-  min-width: 1174px;
   color: #565656;
   font-family: Roboto, sans-serif;
   font-style: normal;
@@ -168,14 +167,14 @@ body {
 .row {
   margin: -37px 0 0;
   overflow: hidden;
-  padding: 11px 0 15px;
+  padding: 11px 15px 15px;
   position: relative;
   background: #f7f8f9;
 }
 .l-constrained-3 {
   margin: 0 auto;
   position: relative;
-  width: 1174px;
+  max-width: 1174px;
 }
 .text-2 {
   float: left;
@@ -184,6 +183,13 @@ body {
   font-size: 0.875294em; /* 14px / 16px = 0.875em */
   font-weight: 300;
 }
+
+.text-2 a {
+    border-right: 1px solid #999;
+    display: inline-block;
+    padding-right: 10px;
+}
+
 .text-3 {
   float: right;
   color: #525252;
@@ -269,19 +275,20 @@ body {
   position: relative;
 }
 .col {
-  padding: 49px 0 53px;
+  padding: 25px 15px;
   position: relative;
   background: rgba(235, 235, 235, 0.65);
 }
 .l-constrained-2 {
   margin: 0 auto;
   position: relative;
-  width: 1174px;
+  max-width: 1174px;
 }
 .text-6 {
   display: block;
   margin: 0 0 0 1px;
   position: relative;
+  line-height: 18px;
 }
 .text-7 {
   margin: 10px 0 0;
@@ -291,15 +298,16 @@ body {
 }
 .row-2 {
   margin: 41px auto 0;
-  padding: 0 1px 0 8px;
   position: relative;
-  width: 1165px;
+  max-width: 1165px;
+  padding: 0 15px;
 }
 .col-2 {
   float: left;
   margin: 2px 0 0;
   position: relative;
-  width: 172px;
+  width: 20%;
+  margin-right: 2%;
 }
 .text-8 {
   color: #525252;
@@ -321,13 +329,12 @@ body {
 .col-3 {
   float: right;
   position: relative;
-  width: 969px;
+  width: 78%;
 }
+
 .text-11 {
-  left: 9px;
   margin: 0 auto;
   position: relative;
-  width: 951px;
   font-size: 1.0625em; /* 17px / 16px = 1.0625em */
   font-weight: 300;
   line-height: 1.352941em; /* 23px / 17px = 1.352941em */
@@ -352,7 +359,7 @@ body {
 .l-constrained {
   margin: 0 auto;
   position: relative;
-  width: 1174px;
+  max-width: 1174px;
 }
 .wft-horiz-red-black_png {
   float: right;
@@ -389,4 +396,57 @@ body {
 }
 .text-style {
   line-height: 23px;
+}
+
+/****************************************************************************/
+/******************************** RESPONSIVE ********************************/
+
+@media screen and (max-width: 767px) {
+  
+  .col-2,
+  .col-3 {
+      width: 100%;
+      box-sizing: border-box;
+  }
+
+  .col-2 {
+    margin-bottom: 25px;
+    margin-right: 0%;
+  }
+
+  .row-2 {
+
+  }
+
+  .text-8,
+  .text-9,
+  .text-10 {
+    float: left;
+    margin: 0;  
+  }
+
+  .text-8,
+  .text-9 {
+     margin-right: 35px;
+  }
+}
+
+@media screen and (max-width: 520px) {
+    .text-8,
+    .text-9,
+    .text-10 {
+        width: 100%;
+        margin-bottom: 15px;
+        margin-right: 0;    
+    }
+}
+
+
+@media screen and (max-width: 479px) {
+    .text-2 a {
+        float: none;
+        display: block;
+        width: 100%;
+        border-right: none;
+    }
 }
