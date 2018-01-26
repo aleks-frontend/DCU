@@ -707,6 +707,8 @@ body {
     z-index: -1;
 }
 
-ul.top-level li:hover .cover {
-    display: block;
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    ul.top-level li:hover .cover {
+        display: block;
+    }
 }
