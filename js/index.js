@@ -6,12 +6,12 @@ if(cartItems !== null && cartItems.length > 2) {
 	document.getElementById("emptyList").style.display = "none";
 
 	for(var i=0;i<cartItems.length;i++) {
-		var para = document.createElement("p");
-        para.classList += "favItem";
-        para.innerHTML = cartItems[i] + " <button onclick='javascript:removeItem('\"+productName+\"')'>X</button>";
+		var listItem = document.createElement("li");
+        listItem.classList += "favItem";
+        listItem.innerHTML = cartItems[i] + ' <button onclick="javascript:removeItem(\'' + cartItems[i].replace(/"/g, '&quot;') + '\')">X</button>';
 		/*var node = document.createTextNode(cartItems[i]);
-		para.appendChild(node);*/
-		favList.appendChild(para);
+		listItem.appendChild(node);*/
+		favList.appendChild(listItem);
 	}
 
 	count.innerHTML = cartItems.length;
@@ -31,13 +31,13 @@ function addToFav() {
 		cartItems.push(productName);
 		count.innerHTML = cartItems.length;
 
-		var para = document.createElement("p");
-		para.classList += "favItem";
-		para.innerHTML = productName + " <button onclick='javascript:removeItem('"+productName+"')'>X</button>";
+		var listItem = document.createElement("li");
+		listItem.classList += "favItem";
+		listItem.innerHTML = '<span>' + productName + '</span> <button onclick="javascript:removeItem(\'' + productName.replace(/"/g, '&quot;') + '\')">X</button>';
 		/*var node = document.createTextNode(productName);
-		para.prependChild(node);
-		element.appendChild(para);*/
-		favList.innerHTML = productName + " <button onclick='javascript:removeItem('"+productName+"')'>X</button>";
+		listItem.prependChild(node);
+		element.appendChild(listItem);*/
+		favList.appendChild(listItem);
 		localStorage.setItem("cartItems", JSON.stringify(cartItems));
     	document.getElementById("emptyList").style.display = "none";
 }
@@ -50,17 +50,17 @@ function removeItem(pr) {
         }
     }
 
-    // Get the <ul> element with id="myList"
-    var elements = document.getElementsByClassName("fav-list");
-    for(var i=0; i<elements.length; i++) {
-        elements.splice(i,1);
-    }
 
-    for(var i=0;i<cartItems.length;i++) {
-        var para = document.createElement("p");
-        var node = document.createTextNode(cartItems[i]);
-        para.appendChild(node);
-        element.appendChild(para);
+    // Get the <ul> element with id="myList"
+    var elements = document.querySelectorAll(".favItem");
+    for(var i=0; i<elements.length; i++) {
+        if ( elements[i].querySelector('span').innerHTML === pr ) {
+            favList.removeChild(elements[i]);
+        }
+    }
+    
+    if ( cartItems == 0 ) {
+        document.getElementById("emptyList").style.display = "block";        
     }
 
     count.innerHTML = cartItems.length;
