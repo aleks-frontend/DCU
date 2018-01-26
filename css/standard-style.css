@@ -145,6 +145,7 @@ body {
 
 .header {
     position: relative;
+    z-index: 2000;
 }
 
 .header-2 {
@@ -691,5 +692,21 @@ body {
         width: 100%;
     }
 
+}
 
+/* Helper class for the IE hack regarding the PDF iframe problem */
+
+.cover {
+    display: none;
+    position: fixed;
+    border: none;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+ul.top-level li:hover .cover {
+    display: block;
 }
