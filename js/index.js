@@ -7,8 +7,8 @@ if(cartItems !== null && cartItems.length > 2) {
 
 	for(var i=0;i<cartItems.length;i++) {
 		var listItem = document.createElement("li");
-        listItem.classList += "favItem";
-        listItem.innerHTML = cartItems[i] + ' <button onclick="javascript:removeItem(\'' + cartItems[i].replace(/"/g, '&quot;') + '\')">X</button>';
+        listItem.className += "favItem";
+        listItem.innerHTML = '<span>' + cartItems[i] + '</span> <button class="btn-remove-item" onclick="javascript:removeItem(\'' + cartItems[i].replace(/"/g, '&quot;') + '\')">X</button>';
 		/*var node = document.createTextNode(cartItems[i]);
 		listItem.appendChild(node);*/
 		favList.appendChild(listItem);
@@ -24,7 +24,7 @@ else {
 function addToFav() {
 		var productName = document.getElementById("productName").innerHTML;
 		for(i=0;i<cartItems.length;i++) {
-			if(cartItems[i] === productName) {
+			if(cartItems[i] == productName) {
 				return;
 			}
 		}
@@ -32,8 +32,8 @@ function addToFav() {
 		count.innerHTML = cartItems.length;
 
 		var listItem = document.createElement("li");
-		listItem.classList += "favItem";
-		listItem.innerHTML = '<span>' + productName + '</span> <button onclick="javascript:removeItem(\'' + productName.replace(/"/g, '&quot;') + '\')">X</button>';
+		listItem.className += "favItem";
+		listItem.innerHTML = '<span>' + productName + '</span> <button class="btn-remove-item" onclick="javascript:removeItem(\'' + productName.replace(/"/g, '&quot;') + '\')">X</button>';
 		/*var node = document.createTextNode(productName);
 		listItem.prependChild(node);
 		element.appendChild(listItem);*/
@@ -44,7 +44,7 @@ function addToFav() {
 
 function removeItem(pr) {
     for(i=0;i<cartItems.length;i++) {
-        if(cartItems[i] === pr) {
+        if(cartItems[i] == pr) {
             cartItems.splice(i,1);
             break;
         }
@@ -55,7 +55,7 @@ function removeItem(pr) {
     var elements = document.querySelectorAll(".favItem");
     for(var i=0; i<elements.length; i++) {
         if ( elements[i].querySelector('span').innerHTML === pr ) {
-            favList.removeChild(elements[i]);
+            elements[i].parentNode.removeChild(elements[i]);
         }
     }
     

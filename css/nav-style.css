@@ -65,6 +65,53 @@ nav ul {
     list-style: none;
 }
 
+ul#item-list li {
+    display: block;
+    margin: 0 0 5px;
+}
+
+button.btn-remove-item {
+    padding: 2px 5px;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    font: normal normal bold 0.8em/1.3em Arial, Helvetica, sans-serif;
+    color: rgba(114,114,114,1);    
+    background: rgba(234,234,234,1);
+    border: 1px solid rgba(211,211,211,1);
+    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) , 0 1px 0 0 rgba(0,0,0,0.298039) ;
+    box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) , 0 1px 0 0 rgba(0,0,0,0.298039) ;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.8) ;
+    text-transform: lowercase;
+    -webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+    transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+
+button.btn-remove-item:hover {
+    cursor: pointer;
+    border: 1px solid rgba(178,178,178,1);
+    color: rgba(76,76,76,1);
+    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) inset, 0 1px 0 0 rgba(0,0,0,0.298039) ;
+    box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) inset, 0 1px 0 0 rgba(0,0,0,0.298039) ;    
+}
+
+button.btn-remove-item:active {
+    position: relative;
+    cursor: default;
+    top: 1px;
+    border: 1px solid rgba(211,211,211,1);
+    color: rgba(114,114,114,1);
+    background: rgba(247,247,247,1);
+    -webkit-box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) inset, 0 1px 0 0 rgba(0,0,0,0.298039) inset;
+    box-shadow: 0 0 1px 1px rgba(255,255,255,0.8) inset, 0 1px 0 0 rgba(0,0,0,0.298039) inset;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;    
+}
+
 nav li {
     display: inline-block;
 }
@@ -368,6 +415,10 @@ a:hover {
 
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     ul.top-level li:hover .cover {
+        display: block;
+    }
+
+    #fav-added-popup .cover {
         display: block;
     }
 }
